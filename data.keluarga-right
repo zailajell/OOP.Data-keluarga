@@ -1,0 +1,72 @@
+using System;
+public class HelloWorld
+{
+    static public void Main ()
+    {
+     familyhobi ak = new familyhobi();
+     familyhobi ayah = new Ayah();
+     familyhobi ibu = new Ibu();
+     familyhobi kakak = new Kakak();
+     familyhobi anak = new Anak();
+     
+     familydata ayahku = new familydata("Mieke Saterdjan",54,083833496424);
+    familydata ibuku = new familydata("Lilik Pujiyati",23,083833496424);
+    familydata kakakku = new familydata("Zulfi Hidayati",16,083833722201);
+    familydata aku = new familydata("Zaila Raudhotul Jannah",16,083833722201);
+     Console.WriteLine("DATA AYAH :\n"+ayahku.nama+"\n"+ayahku.umur+"\n"+ayahku.nohp);
+     ayah.Hobi();
+   Console.WriteLine("DATA IBU:\n"+ibuku.nama+"\n"+ibuku.umur+"\n"+ibuku.nohp);
+     kakak.Hobi();
+     Console.WriteLine("DATA KAKAK:\n"+kakakku.nama+"\n"+kakakku.umur+"\n"+kakakku.nohp);
+     kakak.Hobi();
+     Console.WriteLine("DATA ANAK:\n"+aku.nama+"\n"+aku.umur+"\n"+aku.nohp);
+     anak.Hobi();
+    }
+    class familydata
+    {
+        public string nama;
+        public int umur;
+        public long nohp;
+        public familydata(string Nama,int Umur,long Nohp)
+        {
+            nama = Nama;
+            umur = Umur;
+            nohp = Nohp;
+        }
+    }
+    class familyhobi 
+    {
+        public virtual void Hobi()
+        {
+            Console.WriteLine("Hobi");
+        }
+    }
+    class Ayah:familyhobi
+    {
+        public override void Hobi()
+        {
+            Console.WriteLine("Nonton");
+        }
+    }
+    class Ibu:familyhobi
+    {
+        public override void Hobi()
+        {
+            Console.WriteLine("Memasak");
+        }
+    }
+    class Kakak:familyhobi
+    {
+        public override void Hobi()
+        {
+            Console.WriteLine("Nonton anime");
+        }
+    }
+    class Anak:familyhobi
+    {
+        public override void Hobi()
+        {
+            Console.WriteLine("nonton drakor");
+        }
+    }
+}
